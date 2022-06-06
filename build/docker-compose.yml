@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: ../
+      dockerfile: build/Dockerfile
+    image: 2112fir/forgerock
+    ports:
+      - "8080:8080"
+    environment:
+      - SYMBOL="MSFT"
+      - NDAYS=2
+      - ALPHA_VANTAGE_API_KEY="API KEY MUST PROVIDE"
